@@ -16,9 +16,13 @@
 
 # pylint: disable=line-too-long,broad-except
 
+from builtins import str
+from builtins import object
 import datetime
-from Queue import Queue
+from queue import Queue
 import threading
+
+from future import standard_library
 
 from google.cloud.forseti.common.util import date_time
 from google.cloud.forseti.common.util import logger

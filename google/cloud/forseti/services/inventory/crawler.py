@@ -14,8 +14,8 @@
 
 """Crawler implementation."""
 
-from Queue import Empty
-from Queue import Queue
+from queue import Empty
+from queue import Queue
 import threading
 import time
 

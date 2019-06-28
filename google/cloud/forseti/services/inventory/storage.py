@@ -38,7 +38,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import aliased
 from sqlalchemy.orm import mapper
 
-from google.cloud.asset_v1beta1.proto import assets_pb2
+# from google.cloud.asset_v1beta1.proto import assets_pb2
 from google.protobuf import json_format
 
 from google.cloud.forseti.common.util import date_time

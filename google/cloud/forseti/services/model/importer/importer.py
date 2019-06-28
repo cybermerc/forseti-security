@@ -16,7 +16,7 @@
 # pylint: disable=too-many-instance-attributes
 
 import json
-from StringIO import StringIO
+from io import StringIO
 import traceback
 
 from google.cloud.forseti.common.util import logger

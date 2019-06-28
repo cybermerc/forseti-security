@@ -14,8 +14,9 @@
 
 """Wrapper for Storage API client."""
 import json
-import StringIO
-import urlparse
+from io import StringIO
+# from urllib.parse import urljoin
+from urllib import parse
 from googleapiclient import errors
 from googleapiclient import http
 from httplib2 import HttpLib2Error

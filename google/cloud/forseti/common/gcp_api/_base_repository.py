@@ -17,7 +17,7 @@ import json
 import logging
 import os
 import threading
-from urlparse import urljoin
+# from urlparse import urljoin
 
 import google_auth_httplib2
 import googleapiclient

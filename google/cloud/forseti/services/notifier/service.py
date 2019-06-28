@@ -14,7 +14,7 @@
 
 """Notifier gRPC service. """
 
-from Queue import Queue
+from queue import Queue
 
 from google.cloud.forseti.notifier import notifier
 from google.cloud.forseti.services.notifier import notifier_pb2

@@ -17,12 +17,15 @@
 The metadata server is only accessible on GCE.
 """
 
-import httplib
+import http.client
 import os
 import socket
 
+from future import standard_library
 from google.cloud.forseti.common.util import errors
 from google.cloud.forseti.common.util import logger
+
+standard_library.install_aliases()
 
 # This is used to ping the metadata server, it avoids the cost of a DNS
 # lookup.
@@ -34,7 +37,7 @@ METADATA_SERVER_CONN_TIMEOUT = 2
 _METADATA_FLAVOR_HEADER = 'metadata-flavor'
 _METADATA_FLAVOR_VALUE = 'Google'
 REQUIRED_METADATA_HEADER = {_METADATA_FLAVOR_HEADER: _METADATA_FLAVOR_VALUE}
-HTTP_SUCCESS = httplib.OK
+HTTP_SUCCESS = http.HTTPStatus.OK
 HTTP_GET = 'GET'
 
 LOGGER = logger.get_logger(__name__)
